@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-section">
+        <h1>WelcomeBack <br> to Login</h1>
+        <form action="" id="login-form">
+          <label for="login-email">Email</label>
+          <input type="email" name="" id="login-email" required />
+          <label for="login-password">Password</label>
+          <input type="password" name="" id="login-password" required />
+          <button type="submit">Login</button>
+        </form>
+        <p id="switch">
+          <a href="#" id="show-register">create account</a>
+        </p>
+        <p id="l-message"></p>
+      </div>
+
+      <div class="register-section">
+        <h1>Create Account</h1>
+        <form action="" id="register-form">
+          <label for="name">Name</label>
+          <input type="text" name="" id="name"   />
+          <label for="register-email">Email</label>
+          <input type="email" name="" id="register-email"  />
+          <label for="register-password">Password</label>
+          <input type="password" name="" id="register-password" required />
+          <label for="conf-password">Confirm Password</label>
+          <input type="password" name="" id="conf-password" required />
+          <p id="r-message"></p>
+          <button type="submit">Create</button>
+        </form>
+        <p id="switch">
+          <a href="#" id="show-login">Go To Login</a>
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <script src="login.js"></script>
+  </body>
+</html>

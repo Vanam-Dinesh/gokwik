@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="" class="logo">
+          <img src="Gokwik.png.png" height="120px" width="120px" alt="" />
+          <span></span>
+        </a>
+      </div>
+      <nav class="nav-link">
+        <a href="">Home</a>
+        <a href="">Shop</a>
+        <a href="">About</a>
+      </nav>
+      <div class="nav-side">
+        <div class="nav-cart">
+          <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <span id="cart-count">0</span>
+        </div>
+
+        <div class="profile">
+          <a href=""><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <h1>🛍️ Product Store</h1>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search products..." />
+
+      <select id="category">
+        <option value="all">All Categories</option>
+      </select>
+
+      <select id="sort">
+        <option value="default">Sort By</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+        <option value="rating">Rating: High to Low</option>
+        <option value="az">Name: A to Z</option>
+      </select>
+    </div>
+
+    <p id="status">Loading products...</p>
+
+    <div id="products"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

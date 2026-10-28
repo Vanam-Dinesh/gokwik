@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  /* padding: 25px; */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background: white;
+}
+
+input {
+  width: 250px;
+}
+
+#status {
+  text-align: center;
+  margin: 20px;
+}
+
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.price {
+  color: #087f3e;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.category {
+  color: #555;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.rating {
+  margin: 8px 0;
+  color: #b77900;
+}
+
+
+/* !---- navbar */
+
+.navbar{
+  display: flex;
+  padding: 15px 20px;
+  background-color: #b0abab;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2em;
+  box-shadow: 0 0 10px black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 80px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  
+
+}
+.logo a{
+  text-decoration: none;
+  color: rgb(62, 58, 54);
+}
+.nav-side{
+  display: flex;
+  gap: 20px;
+}
+.nav-side a{
+  color: black;
+}
+.nav-link{
+  display: flex;
+  gap: 30px;
+}
+.nav-link a{
+  text-decoration: none;
+  color: rgb(33, 30, 27);
+  cursor: pointer;
+}
+
+
+.navbar+h1{
+  margin-top: 30px;
+}
+
+
+/* !----- cart css */
+
+
+.add-to-cart,
+.buy-now {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: opacity 0.2s ease;
+}
+
+.add-to-cart {
+  background-color: green;
+}
+
+.buy-now {
+  background-color: orange;
+  margin-left: 10px;
+}
+
+.add-to-cart:hover,
+.buy-now:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* 
+   RESPONSIVE DESIGN */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  #products {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 0 15px;
+  }
+
+  .navbar {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+
+  .nav-link {
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  #products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .navbar {
+    font-size: 1.2em;
+    padding: 12px 15px;
+    gap: 12px;
+  }
+
+  .logo {
+    gap: 6px;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+
+  .nav-link {
+    gap: 12px;
+  }
+
+  .nav-side {
+    gap: 12px;
+  }
+
+  .controls {
+    padding: 0 15px;
+    gap: 10px;
+  }
+
+  input {
+    width: 220px;
+    max-width: 100%;
+  }
+
+  select {
+    max-width: 100%;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .buy-now {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 1em;
+    gap: 12px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-link {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 8px;
+    border-top: 1px solid #999;
+  }
+
+  .nav-side {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .nav-cart,
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .navbar+h1 {
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 23px;
+    margin: 20px 10px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 15px;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  input,
+  select {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  #products {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px 20px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .add-to-cart,
+  .buy-now {
+    padding: 10px 12px;
+    margin: 8px 5px 0 0;
+    font-size: 13px;
+  }
+
+  #status {
+    font-size: 14px;
+    margin: 15px 10px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .logo {
+    gap: 4px;
+  }
+
+  .nav-link {
+    gap: 18px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .add-to-cart,
+  .buy-now {
+    padding: 9px;
+    font-size: 12px;
+  }
+}
